@@ -13,7 +13,7 @@ export const AddTransaction = () => {
       const newTransaction = {
         id: Math.floor(Math.random() * 100000000),
         text,
-        amount: +amount //turns it into a number
+        amount: +amount //+ turns it into a number
       }
 
       addTransaction(newTransaction);
@@ -25,7 +25,7 @@ export const AddTransaction = () => {
       <form onSubmit={onSubmit}>
         <div className="form-control">
           <label htmlFor="text">Text</label>
-          <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Enter text..." />
+          <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Enter expense name..." />
         </div>
         <div classNameName="form-control">
           <label htmlFor="amount"
